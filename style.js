@@ -136,7 +136,8 @@ input.addEventListener("input", function() {
 
 output.addEventListener("input", function() { 
     let outputValue = this.value; 
-    if (!/^\d*\.?\d*$/.test(inputValue)) { 
-        this.value = inputValue.slice(0, -1);  
+    if (!/^\d*\.?\d*$/.test(outputValue)) { 
+        this.value = outputValue.slice(0, -1);  
+        return;
     } 
 });
